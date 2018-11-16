@@ -132,8 +132,8 @@ pre code {
 }
 
 a#repetir.boto_menu_main {
-  text-decoration: none;
-  text-align: center;
+  text-decoration: none!important;
+  text-align: center!important;
   text-transform: uppercase;
   font-weight: bold;
   background-color: rgb(122, 177, 96)!important;

@@ -13,10 +13,10 @@
   <body style='margin : 0px;'>
 
 
-		<div style="height:100%; text-align: center;">
+		<div style="padding-top: 20%; text-align: center;">
 			<video id="video" width="100%" height="100%" autoplay></video>
 			<canvas id="canvas" width="0" height="0" ></canvas>
-	</div>
+		</div>
 			
 
 
@@ -51,7 +51,7 @@
 	// Trigger photo take
 	 document.getElementById("snap").addEventListener("click", function() {
      var x = screen.width;
-     var y = x*1.33;
+     var y = x*0.75;
     canvas.width= x;
     canvas.height= y;
 		context.drawImage(video, 1, 1, x, y);
