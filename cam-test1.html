@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DEMO CAM</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+  </head>
+  <body style='margin : 0px;'>
+
+  	<div style="height:100%; text-align: center;">
+			<video id="video" width="100%" height="auto" autoplay></video>
+			<canvas id="canvas" width="0" height="auto" ></canvas>
+		</div>
+
+	<!-- <div style="height:20%; text-align: center; vertical-align: middle; background-color: rgb(79,128,186);margin-top: -4px;"> -->
+		<a class="boto_menu_main" style="position: fixed; top: 5px; right: 5px; width: auto!important; display: inline-block; " href="index.html"><i class="fas fa-arrow-left"></i></a>
+		<button  class="boto_menu_main" id="snap" style="position: fixed; bottom: 5px; right: 5%; left: 5%; display: inline-block; ">HACER FOTO</button>
+	<!-- </div> -->
+
+  </body>
+
+  <script>
+
+	// Grab elements, create settings, etc.
+	var video = document.getElementById('video');
+  // Get access to the camera!
+	if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+		// Not adding `{ audio: true }` since we only want video now
+		navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+			video.src = window.URL.createObjectURL(stream);
+			video.play();
+		});
+	}
+
+	// Elements for taking the snapshot
+	var canvas = document.getElementById('canvas');
+	var context = canvas.getContext('2d');
+	var video = document.getElementById('video');
+
+	// Trigger photo take
+	 document.getElementById("snap").addEventListener("click", function() {
+     var x = screen.width;
+     var y = screen.height;
+    canvas.width= x;
+    canvas.height= y;
+		context.drawImage(video, 1, 1, x, y);
+    document.getElementById('video').remove();
+    document.getElementById('snap').remove();
+	});
+  </script>
+</html>
