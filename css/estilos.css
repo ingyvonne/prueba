@@ -131,19 +131,38 @@ pre code {
   transition: opacity 1s;
 }
 
-/* FAR 15/11/2018 : Enllaços pantalla principal */
+a#repetir.boto_menu_main {
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: rgb(122, 177, 96)!important;
+  border: 2px solid white!important;
+  border-radius: 0.8rem!important;
+  padding: .75rem .75rem!important;
+  color: white;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+	margin-top: 0.1em;
+	margin-bottom: 0.1em;
+}
+
+/* YPV 16/11/2018 : Enllaços pantalla principal */
 
 button.boto_menu_main, a.boto_menu_main {
-    text-transform: uppercase;
-    font-weight: bold;
-    background-color: rgb(122, 177, 96)!important;
-    border: 2px solid white!important;
-    border-radius: 0.8rem!important;
-    padding: .75rem .75rem!important;
-    color: white;
-    width: 250px;
-    margin-left: auto;
-    margin-right: auto;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: rgb(122, 177, 96)!important;
+  border: 2px solid white!important;
+  border-radius: 0.8rem!important;
+  padding: .75rem .75rem!important;
+  color: white;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
 	margin-top: 0.1em;
 	margin-bottom: 0.1em;
 }
